@@ -19,14 +19,14 @@ public class InMailSteps {
         inMailPage.setFilter(filter);
     }
 
-    @Step("проверка количества непрочитанных")
+    @Step("проверка непрочитанных")
     public void checkCounterUnreadMessage(){
         String s = new InMailPage(BaseSteps.getDriver()).getCounterUnreadEmails();
         boolean check = false;
         if (s != null){
             check = true;
         }
-        Assert.assertTrue(check);
+        Assert.assertTrue("Присутсвуют непрочитанные письма",check);
     }
 
     @Step("отмечаем как прочитанное")
