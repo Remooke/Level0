@@ -15,7 +15,6 @@ public class AllureReporter extends AllureCucumber4Jvm {
 
     @Override
     public void setEventPublisher(EventPublisher publisher) {
-        //Важен порядок - добавлять свой обработчик нужно до super, иначе не сработает (шаг будет уже завершен)
         publisher.registerHandlerFor(TestStepFinished.class,this::handleTestStepFinished);
         super.setEventPublisher(publisher);
     }
