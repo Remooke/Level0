@@ -49,7 +49,7 @@ public class InMailPage {
         try {
             counterUnreadEmails.isDisplayed();
             return true;
-        }catch (Exception a){
+        }catch (Exception a){//
             return false;
         }
     }

@@ -21,7 +21,7 @@ public class InMailSteps {
 
     @Step("проверка непрочитанных")
     public void checkCounterUnreadMessage()throws NoSuchElementException {
-        Assert.assertEquals("Не найдены непрочитанные письма", inMailPage.getCounterUnreadEmails(),true);
+        Assert.assertEquals("Не найдены непрочитанные письма.", inMailPage.getCounterUnreadEmails(),true);
     }
 
     @Step("отмечаем как прочитанное")
