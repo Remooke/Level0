@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 
 public class InMailPage {
@@ -49,7 +48,7 @@ public class InMailPage {
         try {
             counterUnreadEmails.isDisplayed();
             return true;
-        }catch (Exception a){//
+        }catch (NoSuchElementException a){//
             return false;
         }
     }
