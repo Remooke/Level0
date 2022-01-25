@@ -45,11 +45,11 @@ public class InMailPage {
                 (filter.findElement(By.xpath(".//span[(text()='" + menuItem + "')]/parent::div")))).click();
     }
 
-    public boolean getCounterUnreadEmails() throws NoSuchElementException{
+    public boolean getCounterUnreadEmails(){
         try {
             counterUnreadEmails.isDisplayed();
             return true;
-        }catch (NoSuchElementException a){
+        }catch (Exception a){
             return false;
         }
     }
